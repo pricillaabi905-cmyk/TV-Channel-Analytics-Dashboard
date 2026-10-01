@@ -1,33 +1,39 @@
 # TV Channel Analytics Dashboard
 
-An interactive Business Intelligence dashboard developed using Microsoft Power BI to analyze television channel performance, audience reach, viewer engagement, subscription trends, and digital presence.
+An interactive Business Intelligence dashboard developed using Microsoft Power BI to analyze television channel performance, audience reach, viewer engagement, channel categories, and digital presence.
 
 ## Project Overview
 
-The TV Channel Analytics Dashboard transforms raw TV channel data into meaningful and interactive visual insights.
+The TV Channel Analytics Dashboard transforms television channel data into an interactive analytical solution using Microsoft Power BI.
 
-The project focuses on analyzing channel performance across different categories, languages, show categories, audience metrics, subscription fees, and digital platforms.
+The dashboard provides insights into channel performance, audience reach, ratings, subscription-related metrics, social media engagement, YouTube performance, and channel categories.
 
-The dashboard provides an interactive environment where users can explore channel performance, compare different segments, and identify important patterns in the dataset.
+The project consists of three analytical dashboard pages:
+
+- Overview
+- Category & Channel
+- Audience & Digital
+
+Interactive slicers and cross-filtering allow users to explore the data dynamically.
 
 ## Objectives
 
-- Analyze overall TV channel performance
-- Compare channels across different categories and languages
-- Analyze audience reach and viewer engagement
-- Study social media and YouTube performance
-- Analyze subscription fees and viewer performance
-- Examine HD availability across channel categories
-- Identify patterns in ratings, viewership, and digital engagement
-- Develop an interactive and user-friendly Power BI dashboard
-- Present complex data through clear and meaningful visualizations
+- Analyze television channel performance
+- Compare channel performance across categories
+- Understand audience reach across languages
+- Analyze viewer ratings and average viewership
+- Examine subscription fee and viewer relationships
+- Analyze social media and YouTube performance
+- Study channel distribution by category
+- Understand digital reach across different channel characteristics
+- Present analytical findings through an interactive Power BI dashboard
 
 ## Tools and Technologies
 
 | Technology | Purpose |
 |---|---|
 | Microsoft Power BI | Dashboard development and data visualization |
-| Power Query | Data cleaning and transformation |
+| Power Query | Data preparation and transformation |
 | DAX | Measures and analytical calculations |
 | Python | Data preprocessing and analysis |
 | Pandas | Data manipulation |
@@ -37,7 +43,7 @@ The dashboard provides an interactive environment where users can explore channe
 
 ## Dataset
 
-The project uses a TV Channel Analytics dataset containing information about television channels, shows, audience metrics, ratings, subscriptions, and digital engagement.
+The project uses a TV Channel Analytics dataset containing information about television channels, categories, audience metrics, ratings, digital engagement, subscriptions, and channel characteristics.
 
 ### Dataset Attributes
 
@@ -59,27 +65,29 @@ The project uses a TV Channel Analytics dataset containing information about tel
 
 ## Data Preparation
 
-The dataset was prepared before dashboard development using the following process:
+The dataset was prepared before dashboard development through data cleaning, transformation, and validation.
 
-1. Imported the raw dataset
-2. Inspected the dataset structure
-3. Checked for missing values
-4. Identified duplicate records
-5. Standardized data formats
-6. Cleaned categorical fields
-7. Validated numerical columns
-8. Checked data consistency
-9. Created the cleaned dataset
-10. Performed exploratory data analysis
-11. Loaded the processed dataset into Power BI
-12. Created DAX measures
-13. Developed interactive visualizations
+The preparation process included:
 
-## Dashboard Structure
+1. Importing the raw dataset
+2. Inspecting the dataset structure
+3. Checking data types
+4. Identifying missing values
+5. Checking duplicate records
+6. Standardizing data formats
+7. Cleaning categorical fields
+8. Validating numerical fields
+9. Creating the cleaned dataset
+10. Performing exploratory analysis
+11. Loading the processed data into Power BI
+12. Creating DAX measures
+13. Developing interactive visualizations
 
-### Overview
+## Dashboard Pages
 
-The Overview page provides a high-level summary of the TV channel dataset.
+### 1. Overview
+
+The Overview page provides a high-level view of the television channel dataset.
 
 #### Key Performance Indicators
 
@@ -91,17 +99,17 @@ The Overview page provides a high-level summary of the TV channel dataset.
 
 #### Visualizations
 
-- Top 10 Channels by Average Viewers
+- Top Channels by Average Viewers
 - Audience Reach by Language
 - Subscription Fee vs Average Viewers
-- YouTube Views by Show Category
 - Average Viewers by Years Active
-- HD Availability by Channel Category
 - Social Media Followers by Show Category
 
-### Category and Channel
+The page provides an overall understanding of audience performance, channel viewership, and digital engagement.
 
-This page focuses on channel categories, channel performance, subscription information, and audience reach.
+### 2. Category & Channel
+
+The Category & Channel page focuses on channel distribution, category performance, audience reach, and ratings.
 
 #### Key Performance Indicators
 
@@ -113,13 +121,17 @@ This page focuses on channel categories, channel performance, subscription infor
 
 #### Visualizations
 
+- Channel Distribution by Category
+- Average Rating by Channel Category
 - Monthly Reach Breakdown
 - Category Ranking by Average Rating
 - Monthly Reach Contribution by Channel Category
 
-### Audience and Digital
+This page enables comparison between channel categories and provides a detailed view of category-level performance.
 
-This page focuses on audience engagement and digital performance.
+### 3. Audience & Digital
+
+The Audience & Digital page focuses on digital engagement and audience-related performance.
 
 #### Key Performance Indicators
 
@@ -129,23 +141,27 @@ This page focuses on audience engagement and digital performance.
 - Monthly Reach
 - Average Subscription Fee
 
-#### Analysis
+#### Visualizations
 
-- Social Media Followers vs YouTube Views
-- Digital Performance by Channel Category
-- YouTube Views by Language
+- Digital Engagement by Channel Category
 - Channel-Level Digital Performance
+- Digital Reach by Years Active
+
+The page combines social media, YouTube, likes, ratings, and channel characteristics to provide a digital performance perspective.
 
 ## Interactive Filters
 
-The dashboard includes interactive filters that allow users to explore different segments of the dataset.
+The dashboard provides interactive slicers for filtering and exploring the data.
+
+Available filtering dimensions include:
 
 - Language
 - Channel Category
 - Show Category
+- Channel Name
 - HD Availability
 
-These filters dynamically update the dashboard visualizations based on the selected values.
+The slicers dynamically affect the relevant dashboard visuals and allow users to analyze specific channel segments.
 
 ## Key DAX Measures
 
@@ -154,88 +170,51 @@ These filters dynamically update the dashboard visualizations based on the selec
 ```DAX
 Total Channels =
 DISTINCTCOUNT('cleaned_tv_channel_dataset'[Channel_ID])
-```
-
-### Total Shows
-
-```DAX
+Total Shows
 Total Shows =
 SUM('cleaned_tv_channel_dataset'[No_of_Shows])
-```
 
-### Average Viewers
-
-```DAX
+Average Viewers
 Average Viewers =
 AVERAGE('cleaned_tv_channel_dataset'[Avg_Viewers])
-```
 
-### Average Rating
-
-```DAX
+Average Rating
 Average Rating =
 AVERAGE('cleaned_tv_channel_dataset'[Avg_Rating])
-```
 
-### Total Likes
-
-```DAX
+Total Likes
 Total Likes =
 SUM('cleaned_tv_channel_dataset'[Total_Likes])
-```
 
-### Total YouTube Views
-
-```DAX
+Total YouTube Views
 Total YouTube Views =
 SUM('cleaned_tv_channel_dataset'[YouTube_Views])
-```
 
-### Total Monthly Reach
-
-```DAX
+Total Monthly Reach
 Total Monthly Reach =
 SUM('cleaned_tv_channel_dataset'[Monthly_Reach])
-```
 
-### Total Social Media Followers
-
-```DAX
+Total Social Media Followers
 Total Social Followers =
 SUM('cleaned_tv_channel_dataset'[Social_Media_Followers])
-```
 
-### Average Subscription Fee
-
-```DAX
+Average Subscription Fee
 Average Subscription Fee =
 AVERAGE('cleaned_tv_channel_dataset'[Subscription_Fee])
-```
 
-### Average Years Active
-
-```DAX
+Average Years Active
 Average Years Active =
 AVERAGE('cleaned_tv_channel_dataset'[Years_Active])
-```
 
-### Total Categories
-
-```DAX
+Total Categories
 Total Categories =
 DISTINCTCOUNT('cleaned_tv_channel_dataset'[Channel_Category])
-```
 
-### Top Channel Rating
-
-```DAX
+Top Channel Rating
 Top Channel Rating =
 MAX('cleaned_tv_channel_dataset'[Avg_Rating])
-```
 
-### HD Channel Percentage
-
-```DAX
+HD Channel Percentage
 HD Channel % =
 DIVIDE(
     CALCULATE(
@@ -244,62 +223,50 @@ DIVIDE(
     ),
     DISTINCTCOUNT('cleaned_tv_channel_dataset'[Channel_ID])
 )
-```
 
-## Dashboard Design
-
-The dashboard follows a clean and professional visual design with a consistent teal and green color palette.
-
-### Design Features
-
-- Interactive page navigation
+Dashboard Features
+- Interactive dashboard navigation
 - KPI cards
 - Interactive slicers
 - Cross-filtering
-- Category-level analysis
 - Channel-level analysis
-- Audience analytics
-- Digital performance analytics
-- Consistent typography and formatting
-- User-friendly layout
-
-## Key Analysis Areas
-
-The dashboard enables analysis of relationships between:
-
+- Category-level analysis
+- Audience analysis
+- Digital performance analysis
+- Rating analysis
+- Subscription analysis
+- Professional dashboard layout
+- Consistent visual formatting
+Analytical Areas
+The dashboard allows users to explore relationships between:
 - Channel categories and audience reach
-- Languages and monthly reach
+- Languages and audience reach
 - Subscription fees and average viewers
-- Show categories and YouTube views
-- Years active and viewer performance
-- Channel categories and HD availability
-- Social media followers and digital engagement
-- Channel ratings and category performance
+- Channel categories and ratings
+- Years active and digital reach
+- Show categories and social media followers
+- Channel categories and digital engagement
+- Individual channels and their digital performance
+Repository Structure
+TV-Channel-Analytics-Dashboard/
+│
+├── TV-Channel-Analytics-Dashboard.pbix
+├── TV_Channel_Analytics.ipynb
+├── TV_channel_dataset.csv
+├── cleaned_tv_channel_dataset.csv
+└── README.md
 
-## Repository Contents
-
-The repository contains the following project files:
-
-- Power BI dashboard file
-- TV Channel Analytics Jupyter Notebook
-- Original TV channel dataset
-- Cleaned TV channel dataset
-- Project documentation
-
-## How to Use
-
-1. Clone or download this repository.
-2. Open the Power BI dashboard file using Microsoft Power BI Desktop.
-3. If required, update the dataset file path.
+How to Use
+1. Clone or download the repository.
+2. Open TV-Channel-Analytics-Dashboard.pbix using Microsoft Power BI Desktop.
+3. Ensure the dataset path is correctly configured if required.
 4. Refresh the data.
 5. Navigate between the dashboard pages.
-6. Apply the available filters.
+6. Use the available slicers to filter the data.
 7. Interact with the visualizations to explore channel, audience, and digital performance.
-
-## Skills Demonstrated
-
+Skills Demonstrated
 - Data Cleaning
-- Data Preprocessing
+- Data Transformation
 - Exploratory Data Analysis
 - Data Visualization
 - Business Intelligence
@@ -313,21 +280,14 @@ The repository contains the following project files:
 - Data Analysis
 - Interactive Reporting
 - Git and GitHub
-
-## Project Type
-
+Project Type
 Data Analytics | Business Intelligence | Data Visualization | Power BI
-
-## Author
-
-**Pricilla G**
-
+Author
+Pricilla G
 B.Tech in Artificial Intelligence and Data Science
+Conclusion
+The TV Channel Analytics Dashboard demonstrates the application of Business Intelligence techniques to television channel data.
+The project combines data preparation, exploratory analysis, DAX calculations, and interactive Power BI visualizations to provide insights into channel performance, audience reach, ratings, subscriptions, and digital engagement.
+The dashboard provides a structured and interactive approach to exploring television channel analytics and can be further extended with real-time data integration, predictive analytics, and advanced machine learning techniques.
 
-## Conclusion
-
-The TV Channel Analytics Dashboard demonstrates how raw television channel data can be transformed into an interactive Business Intelligence solution.
-
-By combining data preparation, exploratory analysis, DAX calculations, and Power BI visualizations, the project provides a structured approach to analyzing channel performance, audience reach, viewer engagement, and digital presence.
-
-The project can be further enhanced by integrating real-time data sources, additional audience metrics, predictive analytics, and machine learning techniques.
+This version is based on the **actual visuals, pages, KPIs, and slicers inside your uploaded PBIX**, so it avoids claiming dashboard elements that you haven't actually built.
