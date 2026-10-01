@@ -1,4 +1,3 @@
-```markdown
 # TV Channel Analytics Dashboard
 
 An interactive Business Intelligence dashboard developed using Microsoft Power BI to analyze television channel performance, audience reach, viewer engagement, channel categories, and digital presence.
@@ -348,4 +347,3 @@ The TV Channel Analytics Dashboard demonstrates the application of Business Inte
 The project combines data preparation, exploratory analysis, DAX calculations, and interactive Power BI visualizations to provide insights into channel performance, audience reach, ratings, subscriptions, and digital engagement.
 
 The dashboard provides a structured and interactive approach to exploring television channel analytics and can be further extended with real-time data integration, predictive analytics, and advanced machine learning techniques.
-```
