@@ -87,6 +87,9 @@ The preparation process included:
 
 ### 1. Overview
 
+<img width="1435" height="802" alt="image" src="https://github.com/user-attachments/assets/391855c3-0a4c-41ee-8c6d-68a636c96283" />
+
+
 The Overview page provides a high-level view of the television channel dataset.
 
 #### Key Performance Indicators
@@ -109,6 +112,9 @@ The page provides an overall understanding of audience performance, channel view
 
 ### 2. Category & Channel
 
+<img width="1422" height="793" alt="image" src="https://github.com/user-attachments/assets/f68781f6-5ff5-4132-8c24-b09d695e3926" />
+
+
 The Category & Channel page focuses on channel distribution, category performance, audience reach, and ratings.
 
 #### Key Performance Indicators
@@ -130,6 +136,9 @@ The Category & Channel page focuses on channel distribution, category performanc
 This page enables comparison between channel categories and provides a detailed view of category-level performance.
 
 ### 3. Audience & Digital
+
+![Uploading image.png…]()
+
 
 The Audience & Digital page focuses on audience engagement and digital performance.
 
