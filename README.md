@@ -137,7 +137,8 @@ This page enables comparison between channel categories and provides a detailed 
 
 ### 3. Audience & Digital
 
-![Uploading image.png…]()
+<img width="1430" height="786" alt="image" src="https://github.com/user-attachments/assets/7e9468ee-2fc9-4002-917c-b20b010c6e58" />
+
 
 
 The Audience & Digital page focuses on audience engagement and digital performance.
